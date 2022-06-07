@@ -68,6 +68,9 @@ public class Deck {
     }
 
     public Card drawCard(){
+        if (getCardAmount() == 0){
+            fillDeck();
+        }
         Card drawn = deck.elementAt(deck.size() - 1);
         deck.remove(deck.size() - 1);
         current_amount = deck.size();

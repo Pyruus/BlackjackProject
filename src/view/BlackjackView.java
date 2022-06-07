@@ -39,24 +39,12 @@ public class BlackjackView {
     }
 
 
-    public static void runGame(BlackjackView form){
+    public static void initGame(BlackjackView form) {
         //SETUP
-        int stake;
-        boolean player_phase = true;
-        boolean busted = false;
         form.deck = new Deck();
         form.deck.shuffleDeck();
         form.player = new Player("Player");
         form.dealer = new Dealer("Dealer");
-        form.player.drawCard(form.deck);
-        form.player.drawCard(form.deck);
-        form.dealer.drawCard(form.deck);
-        form.dealer.drawCard(form.deck);
-        //GAME
-        form.dealerCardsTextArea.append("Dealer's cards: \n");
-        form.dealerCardsTextArea.append(form.dealer.getCardsPrint());
-        form.playerCardsTextArea.append("Player's cards: \n");
-        form.playerCardsTextArea.append(form.player.getCardsPrint());
     }
 
     public static void main(String[] args) {
@@ -66,6 +54,9 @@ public class BlackjackView {
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.pack();
         mainFrame.setVisible(true);
-        runGame(form);
+        initGame(form);
+        while(true){
+
+        }
     }
 }
