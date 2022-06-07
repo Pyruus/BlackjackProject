@@ -25,8 +25,14 @@ public class playerTest {
         assertEquals(expected, testPlayer.getValue());
     }
 
-//    @Test
-//    public void testPrint(){
-//        assureEqual
-//    }
+    @Test
+    public void testPrint(){
+        Deck d = new Deck();
+        d.shuffleDeck();
+        int value = d.getCard(d.getCardAmount() - 1).getValue() + d.getCard(d.getCardAmount() - 2).getValue();
+        String expected = d.getCard(d.getCardAmount() - 1).getCardPrint() + "\n" + d.getCard(d.getCardAmount() - 2).getCardPrint() + "\n\nValue: " + value;
+        testPlayer.drawCard(d);
+        testPlayer.drawCard(d);
+        assertEquals(expected, testPlayer.getCardsPrint());
+    }
 }

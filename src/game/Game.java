@@ -6,6 +6,7 @@ import player.Player;
 
 import java.util.Scanner;
 
+//This class works only for console version of the game. It covers main logic of the game.
 public class Game {
     protected int chips;
     protected String player_name;
@@ -46,8 +47,7 @@ public class Game {
         while (player_phase) {
             System.out.println("Dealer's cards: ");
             dealer.printCards();
-            System.out.println("");
-            System.out.println(player.getName() + "'s cards: ");
+            System.out.println("\n" + player.getName() + "'s cards: ");
             player.printCards();
             System.out.println("Value: " + player.getValue());
             int choice = 0;

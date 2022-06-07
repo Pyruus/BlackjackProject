@@ -34,6 +34,7 @@ public class Dealer extends Player {
             for (int i = 0; i < cards; i++) {
                 res += hand.elementAt(i).getCardPrint() + "\n";
             }
+            res += "\nValue: " + getValue();
         }
         else{
             res += hand.elementAt(0).getCardPrint() + "\n" + "[hidden]";

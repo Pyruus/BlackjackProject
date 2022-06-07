@@ -4,6 +4,7 @@ import game.Game;
 
 import java.util.Scanner;
 
+//This class is responsible for running console version of game. For graphical version run BlackjackView from view package.
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

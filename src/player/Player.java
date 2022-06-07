@@ -27,6 +27,7 @@ public class Player {
         for (int i = 0; i < cards; i++){
             res += hand.elementAt(i).getCardPrint() + "\n";
         }
+        res += "\nValue: " + getValue();
         return res;
     }
 
