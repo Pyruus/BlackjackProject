@@ -80,6 +80,7 @@ public class BlackjackView {
     public static void initGame(BlackjackView form) {
         //SETUP
         form.deck = new Deck();
+        form.deck.fillDeck();
         form.deck.shuffleDeck();
         form.chips = 100;
         form.chipsTextField.setText("" + form.chips);

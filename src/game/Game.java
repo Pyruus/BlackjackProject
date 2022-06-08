@@ -23,6 +23,7 @@ public class Game {
         boolean player_phase = true;
         boolean busted = false;
         Deck deck = new Deck();
+        deck.fillDeck();
         deck.shuffleDeck();
         Player player = new Player(name);
         Player dealer = new Dealer("Dealer");

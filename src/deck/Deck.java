@@ -68,8 +68,10 @@ public class Deck {
     }
 
     public Card drawCard(){
-        if (getCardAmount() == 0){
+        if (getCardAmount() <= 15){
             fillDeck();
+            fillDeck();
+            shuffleDeck();
         }
         Card drawn = deck.elementAt(deck.size() - 1);
         deck.remove(deck.size() - 1);
